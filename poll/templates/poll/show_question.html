@@ -1,0 +1,14 @@
+{% for q in question %}
+<h1>{{q}}</h1>
+<h1>{{q.type}}</h1>
+<h2>Варианты ответа:</h2>
+{% for a in answer %}
+<h3> {{a}}</h3>
+{%endfor%}
+
+<form action=""method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit" name="submit" value="Submit">Ответить</a></button>
+</form>
+{%endfor%}

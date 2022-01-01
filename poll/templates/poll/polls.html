@@ -1,0 +1,7 @@
+{% for p in first %}
+
+<h1>Название опроса: {{p.title}}</h1>
+<h2>Описание: {{p.description}}</h2>
+<p class="link-read-post"><a href="{{ p.get_absolute_url }}">Пройти опрос</a></p>
+
+{% endfor %}

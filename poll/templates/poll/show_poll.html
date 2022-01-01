@@ -1,0 +1,12 @@
+{% if user.is_authenticated %}
+Добро пожаловать {{user.username}}<br>
+{%endif%}
+Название опроса: {{poll.title}}<br>
+{{poll.description}}<br>
+Вопросы: <br>
+{% for q in question %}
+
+{{q}}<br>
+{{answer.q}}
+<button ><a href="{{q.get_absolute_url}}"> Ответить</a></button><br>
+{%endfor%}
